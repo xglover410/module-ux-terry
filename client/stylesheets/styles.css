@@ -1,0 +1,78 @@
+/* reset default styles */
+
+
+
+header {
+
+}
+
+body {
+
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* cards container */
+.charContainer {
+  
+}
+
+/* character card container */
+.charCard {
+  background-color:white;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 5px;
+}
+
+/* character card header */
+.charHeadContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.charHeadContainer div {
+  width: 100%;
+}
+
+
+.charHeadContainer h2 {
+  margin-bottom: 0;
+}
+
+.charHeadContainer .favIcon {
+
+}
+
+/* character additional details - films */
+.charAddlDetail {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.charFilmsList {
+  margin-top: 0;
+}
+
+.charFilm {
+  margin-left: 0.5rem;
+}
+
+.charDetailsList{
+
+}
+
+.charDetailsList li{ 
+  margin:5px;
+}
+
+.primaryButton{
+
+}
+
+.secondaryButton{
+
+}
+
