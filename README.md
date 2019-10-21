@@ -187,6 +187,22 @@ After you've created your separate files and imported them accordingly, reload t
 
 ## Extensions
 
+### Styled Components
+There is a paradigm for styling known as "CSS-in-JS", where styling rules are defined with JavaScript instead of external stylesheets. One popular implemention of this for React is called [styled-components](https://www.styled-components.com/). This library uses ES6's template literals to allow the creation of custom React components that have styling rules embedded in them. For example, the following code creates a "Title" component which is just an h1 tag with the specified styling:
+
+
+```
+const Title = styled.h1` 
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+```
+
+Which would then be able to be rendered using the JSX syntax `<Title>`.
+
+For this extension, refactor your code so that the character card container (`.charCard`) and its styling are implemented using styled-components. You will need to install the package - see instructions [here](https://www.styled-components.com/docs/basics#installation) on installing and getting started.
+
 ### Form Styling
 Since we did not explicitly cover styling this page, use what you have learned so far and apply some of your new design skills to this page!  How would you style the buttons? The input field?
 
