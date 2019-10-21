@@ -172,6 +172,19 @@ To combat this, the first thing we can do is to use SCSS variables. Please take 
 
 4. (optional) do the same but for different shade of black
 
+### The Sass @import Rule
+As projects grow, they quickly reach a point where it makes sense to modularize the styling rules into separate files, for improved readability and maintainability. SASS's `@import` rule allows for this importing of rulesets (as well as mixins, functions, and variables).
+
+Note: While plain CSS provides a similar feature with its `@import` rule, it causes the browser to make separate HTTP requests for each file, which isn't ideal. By comparison, Sass will compile all of the imports into a single file.
+
+First, create a new SCSS file in the `stylesheets` folder to contain your Sass variable declarations, so that they can be accesssed throughout the project. Sass files that are only meant to be imported are called ['partials'](https://sass-lang.com/documentation/at-rules/import#partials), and by convention their filenames start with an underscore. Therefore, call this file `_variables.scss` and move all of your color variables into this file.
+
+Then, in your `styles.scss` file, `@import` in the variables file. Note: when importing partials, you can leave off the underscore in the filename. Reload the page and verify all styling rules are still being applied.
+
+Finally, look through the `styles.scss` file and decide which rulesets would make sense to place in separate files. There's no one right answer - read [this guide](http://thesassway.com/beginner/how-to-structure-a-sass-project) for some general guidelines on how to structure Sass projects. For example, you might want to create a partial to contain all button-specific styling, and another to contain the header's styling. 
+
+After you've created your separate files and imported them accordingly, reload the page and verify all styling rules are still being applied. 
+
 ## Extensions
 
 ### Form Styling
