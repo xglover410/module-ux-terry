@@ -1,12 +1,12 @@
 # UX / UI Module
 
 ## Learning Goals
-This module is _designed_ (😉😉) to teach some basic design principles when styling a web application.  It includes a combination of general design principles, helpful tips and tricks for common css issues, and introduces SASS and some of it's most helpful starter features.
+This module is _designed_ (😉😉) to teach some basic design principles when styling a web application.  It includes a combination of general design principles, helpful tips and tricks for common CSS issues, and introduces Sass and some of its most helpful starter features.
 
 Goals for this module are:
 1. Get an understanding of basic design principles: how to layout an interface and think about mobile responsiveness, how to pick out a useful color palette
-2. Learn some tricky css moves: best ways to center a div, how to incorporate flexbox and grids
-3. An introduction to SASS: CSS preprocessor with some powerful features!
+2. Learn some tricky CSS moves: best ways to center a div, how to incorporate flexbox and grids
+3. An introduction to Sass: CSS preprocessor with some powerful features!
 
 ## Setup
 
@@ -28,43 +28,43 @@ The page looks a bit boring though. Let's see if we can make it look better.
 
 3. Going back to using the grid layout. Instead of 280px, we want the width of the card to be responsive instead. **Hint:** lookup what fractional units are and how to use them.
 
-4. Try changing the width of the browser; Notice how the width of the card expands and shrinks to fit 5 evenly sized columns , but the shrinking makes the cards pretty much unreadable. What if we want the card to be at least 280px wide; as we decrease the browser width, if the width of each card is about to be lower than 280px, we'd want to decrease the number of cards per row so that each card is at least 280px wide. How would you do that?
+4. Try changing the width of the browser; Notice how the width of the card expands and shrinks to fit 5 evenly sized columns, but the shrinking makes the cards pretty much unreadable. What if we want the card to be at least 280px wide; as we decrease the browser width, if the width of each card is about to be lower than 280px, we'd want to decrease the number of cards per row so that each card is at least 280px wide. How would you do that?
 
 ### Setup Individual Card Layout
 
 1. Now let's move on to the layout for an individual card. Notice that stats of the character are aligned to the left border of the card container. What if we want to center the stats? **Hint:** use flexbox
 
-    After you have set the display to flex for `.charDetailList`, do you notice the vertical spacing between the list items became wider? This might seem weird since we only added `display: flex` without changing margins. To figure out what is going on, we can use "Inspect Elements" from chrome dev tools to see how the margins of the list items change before and after setting display to flex. In both cases, are the margin overlapping or adjacent to each other?
+    After you have set the display to flex for `.charDetailList`, do you notice the vertical spacing between the list items became wider? This might seem weird since we only added `display: flex` without changing margins. To figure out what is going on, we can use "Inspect Elements" from Chrome dev tools to see how the margins of the list items change before and after setting display to flex. In both cases, are the margin overlapping or adjacent to each other?
 
     After setting display to flex you can see that the margins no longer overlap. This is a behavior called margin collapsing. Margin collapse is expected unless the display is set to `flex` or `grid`. There are more rules that govern when and how the margins collapse, which we won't have time to get into. Here's a link explaining this behavior:
 
-    [https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing](https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing&sa=D&ust=1563240325287000)
+    [https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 
 2. And now that we are working on the styling for the cards, let's change the font a bit as well. We will use Cabin for the stats and Oswald for the header. Google font is a popular site for importing font. Let's go ahead and import Cabin and Oswald into our stylesheet.
 
 3. The first thing that we are going to look at is the header of the cards. Notice that there's a horizontal white space between the character name and the star in the header. First, inspect the header using Chrome dev tool to see if you can figure out which part of the style.css specifies the white space.
 
-    You can see that the white space between the character name and the star is implemented by setting the width of div inside `.charHeaderContainer` class to 100%. If we remove that declaration, what would you have to add to the `.charHeaderContainer` in style.css so that the header and the star is apart from one other? **Hint:** you'd have to use flexbox here
+    You can see that the white space between the character name and the star is implemented by a rule targeting divs inside `.charHeaderContainer`. If we remove that declaration, what would you have to add to the `.charHeaderContainer` in style.css so that the header and the star is apart from one other?
 
-4. Let's explore css flexbox further by increasing the width of the header to 100px and inspect the header of the card again. You see that the star and the name of the character are not at the same level vertically. Why is that? Inspect the element again to see why that is the case. **Hint:** check margins
+4. Let's explore positioning further by increasing the width of the header to 100px and inspecting the header of the card again. You'll see that the star and the name of the character are not at the same level vertically. Why is that? Inspect the element again to see why that is the case. **Hint:** Check margins
 
-    Also, If you want to align the top of the star to the top of the header div, how would you do that? What if you want to align the bottom of the star to the bottom of the header div?
+    If you want to align the top of the star to the top of the header div, how would you do that? What if you want to align the bottom of the star to the bottom of the header div?
 
-5. Ane one final thing to want to go over is how to center a div. It's one of the most popular CSS questions that you'd encounter on the interview trail after codesmith. Currently there are two headers in our applications, One containing a h1 tag and another h2 tag. After setting the height of headers to 100px, How would you go about centering the h1 and h2 tags in their parent header div using flexbox?
+5. One final thing we'll go over is how to center a div. It's one of the most popular CSS questions that you'll encounter on the interview trail after Codesmith. Currently there are two headers in our applications: one containing a h1 tag and another a h2 tag. After setting the height of headers to 100px, how would you go about centering the h1 and h2 tags in their parent header div using flexbox?
 
-### Incorporate SASS
+### Incorporate Sass
 Now that we've learned how to do basic layout with grid and flexbox, I'll guide you through the process of adding Sass to your project. Since you'll have a dedicated unit on webpack later in the program, I have already installed node-sass and sass-loader and modified the webpack config for you. All you need to do is
 
 1. Change the style.css file to style.scss.         
 
 2. Do the same for the import statement in your App.jsx.
 
-3. Hit save and refresh the browser again, and if your app looks the same then boom you are now using sass. Is it really that simple? Yes it's that simple. 
+3. Hit save and refresh the browser again, and if your app looks the same then boom: you are now using Sass. Is it really that simple? Yes it's that simple. 
 
 ### Refactor with SASS Nesting
-Now let's move on to different sass feature that you can use with different web design principle + css declaration that will be useful for not only your projects here at Codesmith but also during your job search and career as well.
+Now let's move on to different Sass feature that you can use with different web design principle + css declaration that will be useful for not only your projects here at Codesmith but also during your job search and career as well.
 
-1. So one of the quick benefits of sass that we can go over now is nesting. Remember how we specify specific css style for an element that's inside a class:
+1. So one of the quick benefits of Sass that we can go over now is nesting. Remember how we specify specific CSS style for an element that's inside a class:
 
     ```scss
     .charHeadContainer{}
@@ -72,7 +72,7 @@ Now let's move on to different sass feature that you can use with different web 
     .charHeadContainer h2{}
     ```
 
-2. While this is fine, doing nesting with sass will be more readable. Look up how to do nesting with sass and refactor the style.scss for `.charHeadContainer` and `.charDetailsList`.
+2. While this is fine, doing nesting with Sass will be more readable. Look up how to do nesting with Sass and refactor the style.scss for `.charHeadContainer` and `.charDetailsList`.
 
 Nesting is not a must and it does not always improve readability. You can imagine if you have for example 10 level of nestedness, using this syntax might actually make it less readable. So use your judgement in this case.
 
@@ -172,7 +172,7 @@ To combat this, the first thing we can do is to use SCSS variables. Please take 
 
 4. (optional) do the same but for different shade of black
 
-### The Sass @import Rule
+### The SASS @import Rule
 As projects grow, they quickly reach a point where it makes sense to modularize the styling rules into separate files, for improved readability and maintainability. SASS's `@import` rule allows for this importing of rulesets (as well as mixins, functions, and variables).
 
 Note: While plain CSS provides a similar feature with its `@import` rule, it causes the browser to make separate HTTP requests for each file, which isn't ideal. By comparison, Sass will compile all of the imports into a single file.
@@ -184,6 +184,7 @@ Then, in your `styles.scss` file, `@import` in the variables file. Note: when im
 Finally, look through the `styles.scss` file and decide which rulesets would make sense to place in separate files. There's no one right answer - read [this guide](http://thesassway.com/beginner/how-to-structure-a-sass-project) for some general guidelines on how to structure Sass projects. For example, you might want to create a partial to contain all button-specific styling, and another to contain the header's styling. 
 
 After you've created your separate files and imported them accordingly, reload the page and verify all styling rules are still being applied. 
+
 
 ## Extensions
 
@@ -202,6 +203,7 @@ const Title = styled.h1`
 Which would then be able to be rendered using the JSX syntax `<Title>`.
 
 For this extension, refactor your code so that the character card container (`.charCard`) and its styling are implemented using styled-components. You will need to install the package - see instructions [here](https://www.styled-components.com/docs/basics#installation) on installing and getting started.
+
 
 ### Form Styling
 Since we did not explicitly cover styling this page, use what you have learned so far and apply some of your new design skills to this page!  How would you style the buttons? The input field?
