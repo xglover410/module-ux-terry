@@ -150,6 +150,15 @@ Absolute units such as `px` set the font size to take up a fixed amount of space
 1. Write a CSS ruleset that selects the entire `html` tag, and sets the `font-size` equal to `1.5vw`. This will make the document's root font-size relative to the viewport. 
 2. Resize the window, and notice that the text size scales responsively.
 
+### Media Queries
+Notice though, as the window shrinks further and further, the text starts to get uncomfortably small. This is where @media queries can come in handy. While media queries can be used in a variety of contexts, they are very often used to ensure that different CSS rulesets will apply depending on the current size of the client's screen. 
+
+1. Play around with resizing the screen in your browser's dev tools, and figure out what the breakpoint is where the font resizing makes it difficult to read. Chrome and other browsers have handy built-in developer tools to visualize and measure various screen sizes.
+
+2. Add a media query rule to your CSS so that when the client's screen falls below that breakpoint, the document's root `font-size` is set to absolute, rather than relative units. Play around with the breakpoint and font-size settings until you find the text scaling in a pleasant and readable way.
+
+For a deep dive into the subject of responsive typography and media queries, a great resource can be found [here](https://www.smashingmagazine.com/2016/05/fluid-typography/).
+
 ### Implementing SASS Variables
 As your application grows more complex, we would have different shades of primary color. What if the design team decided to change the primary color from blue to green instead? In the way our stylesheet is set up currently, changing different shades of blue to green while maintaining their hierarchy going to take a lot of time.
 
