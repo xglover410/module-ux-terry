@@ -142,6 +142,14 @@ Similar to different shades of "black" that we discussed earlier, you can have d
 
 ![button-border-mockup](./docs/images/button-border-mockup.png)
 
+### Responsive Font Scaling
+Thanks to Flexbox, the size and number of the cards are nicely responsive, but the font size is static. Let's do something about that!
+
+Absolute units such as `px` set the font size to take up a fixed amount of space on a screen, but relative units can make our text more dynamic. One particularly useful set of units deals with the user's viewport (which refers to the visible area of a webpage). For example, to set the font size to be equal to 1% of the width of the user's current viewport, you would use the `vw` unit, as in `font-size: 1vw`.
+
+1. Write a CSS ruleset that selects the entire `html` tag, and sets the `font-size` equal to `1.5vw`. This will make the document's root font-size relative to the viewport. 
+2. Resize the window, and notice that the text size scales responsively.
+
 ### Implementing SASS Variables
 As your application grows more complex, we would have different shades of primary color. What if the design team decided to change the primary color from blue to green instead? In the way our stylesheet is set up currently, changing different shades of blue to green while maintaining their hierarchy going to take a lot of time.
 
