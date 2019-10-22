@@ -145,11 +145,14 @@ Similar to different shades of "black" that we discussed earlier, you can have d
 ### Responsive Font Scaling
 Thanks to Flexbox, the size and number of the cards are nicely responsive, but the font size is static. Let's do something about that!
 
-Absolute units such as `px` set the font size to take up a fixed amount of space on a screen, but relative units can make our text more dynamic. One particularly useful set of units deals with the user's viewport (which refers to the visible area of a webpage). For example, to set the font size to be equal to 1% of the width of the user's current viewport, you would use the `vw` unit, as in `font-size: 1vw`.
+Absolute units such as `px` set the font size to take up a fixed amount of space on a screen, but relative units can make our text more dynamic. One particularly useful set of units deals with the user's viewport (which refers to the visible area of a webpage). For example, to set the font size equal to 1% of the width of the user's current viewport, you would use the `vw` unit, as in `font-size: 1vw`.
 
 1. Write a CSS ruleset that selects the entire `html` tag, and sets the `font-size` equal to `1.5vw`. This will make the document's root font-size relative to the viewport. 
+
 2. Resize the window, and notice that the text size scales responsively.
+
 3. Notice, however, that the buttons' font size doesn't change. This is because buttons come with default styling, which includes absolute font-size units.
+
 4. Write a CSS rule targeting buttons that sets their `font-size` equal to 75% of the document's root font size. **Hint:** Look into what relative units CSS provides other than viewport-based units.
 
 ### Media Queries
