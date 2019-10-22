@@ -149,6 +149,8 @@ Absolute units such as `px` set the font size to take up a fixed amount of space
 
 1. Write a CSS ruleset that selects the entire `html` tag, and sets the `font-size` equal to `1.5vw`. This will make the document's root font-size relative to the viewport. 
 2. Resize the window, and notice that the text size scales responsively.
+3. Notice, however, that the buttons' font size doesn't change. This is because buttons come with default styling, which includes absolute font-size units.
+4. Write a CSS rule targeting buttons that sets their `font-size` equal to 75% of the document's root font size. **Hint:** Look into what relative units CSS provides other than viewport-based units.
 
 ### Media Queries
 Notice though, as the window shrinks further and further, the text starts to get uncomfortably small. This is where @media queries can come in handy. While media queries can be used in a variety of contexts, they are very often used to ensure that different CSS rulesets will apply depending on the current size of the client's screen. 
@@ -203,7 +205,6 @@ const Title = styled.h1`
 Which would then be able to be rendered using the JSX syntax `<Title>`.
 
 For this extension, refactor your code so that the character card container (`.charCard`) and its styling are implemented using styled-components. You will need to install the package - see instructions [here](https://www.styled-components.com/docs/basics#installation) on installing and getting started.
-
 
 ### Form Styling
 Since we did not explicitly cover styling this page, use what you have learned so far and apply some of your new design skills to this page!  How would you style the buttons? The input field?
