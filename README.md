@@ -160,11 +160,13 @@ Notice though, as the window shrinks further and further, the text starts to get
 
 1. Play around with resizing the screen in your browser's dev tools, and figure out what the breakpoint is where the font resizing makes it difficult to read. Chrome and other browsers have handy built-in developer tools to visualize and measure various screen sizes.
 
-2. Add a media query rule to your CSS so that when the client's screen falls below that breakpoint, the document's root `font-size` is set to absolute, rather than relative units. Play around with the breakpoint and font-size settings until you find the text scaling in a pleasant and readable way.
+2. Add a media query rule to your CSS so that when the client's screen falls below that breakpoint, the document's root `font-size` is set to absolute, rather than relative units. Play around with the breakpoint and font-size settings until you find the text scaling in a pleasant and readable way. For a deep dive into the subject of responsive typography and media queries, a great resource can be found [here](https://www.smashingmagazine.com/2016/05/fluid-typography/).
 
-3. It's common to see media queries used to remove less-important content for devices with smaller screens, in order to reduce clutter. Write a media query which removes any buttons from the page when the user's device is a mobile phone (you may need to look up common mobile screen sizes).
+3. It's common to see media queries used to remove less-important content for devices with smaller screens, in order to reduce clutter. Write a media query which removes any buttons from the page when the user's device is a mobile phone (you may want to look up common mobile screen sizes). **Note:** In reality you wouldn't hide these buttons as they are important to the app! This is just an illustration of a potential use case for media queries.
 
-For a deep dive into the subject of responsive typography and media queries, a great resource can be found [here](https://www.smashingmagazine.com/2016/05/fluid-typography/).
+(ALTERNATE?) 3. Finally, add a media query targeting mobile devices (you may want to research common phone screen sizes). This rule should force the buttons to display vertically in a column instead of a row, and fill 100% of the width of their container. Also, center the rest of the character info so that everything is aligned. It should look something like this:
+
+![mobile-card-view](./docs/images/mobile-card-view.png)
 
 ### Implementing SASS Variables
 As your application grows more complex, we would have different shades of primary color. What if the design team decided to change the primary color from blue to green instead? In the way our stylesheet is set up currently, changing different shades of blue to green while maintaining their hierarchy going to take a lot of time.
