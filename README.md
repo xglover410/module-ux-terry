@@ -159,6 +159,8 @@ Notice though, as the window shrinks further and further, the text starts to get
 
 2. Add a media query rule to your CSS so that when the client's screen falls below that breakpoint, the document's root `font-size` is set to absolute, rather than relative units. Play around with the breakpoint and font-size settings until you find the text scaling in a pleasant and readable way.
 
+3. It's common to see media queries used to remove less-important content for devices with smaller screens, in order to reduce clutter. Write a media query which removes any buttons from the page when the user's device is a mobile phone (you may need to look up common mobile screen sizes).
+
 For a deep dive into the subject of responsive typography and media queries, a great resource can be found [here](https://www.smashingmagazine.com/2016/05/fluid-typography/).
 
 ### Implementing SASS Variables
