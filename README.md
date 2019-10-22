@@ -164,7 +164,7 @@ Notice though, as the window shrinks further and further, the text starts to get
 
 3. It's common to see media queries used to remove less-important content for devices with smaller screens, in order to reduce clutter. Write a media query which removes any buttons from the page when the user's device is a mobile phone (you may want to look up common mobile screen sizes). **Note:** In reality you wouldn't hide these buttons as they are important to the app! This is just an illustration of a potential use case for media queries.
 
-(ALTERNATE?) 3. Finally, add a media query targeting mobile devices (you may want to research common phone screen sizes). This rule should force the buttons to display vertically in a column instead of a row, and fill 100% of the width of their container. Also, center the rest of the character info so that everything is aligned. It should look something like this:
+(ALTERNATE?) 3. Finally, add a media query targeting mobile devices (you may want to research common phone screen sizes). This rule should force the buttons to display vertically in a column instead of a row, and fill 100% of the width of their container. Also, it should center the rest of the character info so that everything is aligned. The final result should look something like this:
 
 ![mobile-card-view](./docs/images/mobile-card-view.png)
 
