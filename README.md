@@ -142,7 +142,7 @@ Similar to different shades of "black" that we discussed earlier, you can have d
 
 ![button-border-mockup](./docs/images/button-border-mockup.png)
 
-### Responsive Font Scaling
+### Fluid Font Scaling
 Thanks to Flexbox, the size and number of the cards are nicely responsive, but the font size is static. Let's do something about that!
 
 Absolute units such as `px` set the font size to take up a fixed amount of space on a screen, but relative units can make our text more dynamic. One particularly useful set of units deals with the user's viewport (which refers to the visible area of a webpage). For example, to set the font size equal to 1% of the width of the user's current viewport, you would use the `vw` unit, as in `font-size: 1vw`.
@@ -162,9 +162,7 @@ Notice though, as the window shrinks further and further, the text starts to get
 
 2. Add a media query rule to your CSS so that when the client's screen falls below that breakpoint, the document's root `font-size` is set to absolute, rather than relative units. Play around with the breakpoint and font-size settings until you find the text scaling in a pleasant and readable way. For a deep dive into the subject of responsive typography and media queries, a great resource can be found [here](https://www.smashingmagazine.com/2016/05/fluid-typography/).
 
-3. It's common to see media queries used to remove less-important content for devices with smaller screens, in order to reduce clutter. Write a media query which removes any buttons from the page when the user's device is a mobile phone (you may want to look up common mobile screen sizes). **Note:** In reality you wouldn't hide these buttons as they are important to the app! This is just an illustration of a potential use case for media queries.
-
-(ALTERNATE?) 3. Finally, add a media query targeting mobile devices (you may want to research common phone screen sizes). This rule should force the buttons to display vertically in a column instead of a row, and fill 100% of the width of their container. Also, it should center the rest of the character info so that everything is aligned. The final result should look something like this:
+3. Finally, add a media query targeting mobile devices (you may want to research common phone screen sizes). This rule should force the buttons to display vertically in a column instead of a row, and fill 100% of the width of their container. Also, it should center the rest of the character info so that everything is aligned. The final result should look something like this:
 
 ![mobile-card-view](./docs/images/mobile-card-view.png)
 
@@ -196,6 +194,33 @@ After you've created your separate files and imported them accordingly, reload t
 
 
 ## Extensions
+
+### CSS Modules
+(CSS Modules)[https://github.com/css-modules/css-modules] are another tool available to modularize our stylesheets - but beyond just modularization, they also help solve the problem of *scoping* in CSS. Even if you've used Sass imports to break up your stylesheets, they still ultimately get processed into the same global styling scope, so if you're not careful with your selector naming conventions you run the risk of conflicts.
+
+CSS Modules are just regular CSS (or Sass) files that get imported into individual front-end files - in our case, React components. The syntax looks like this:
+
+``` 
+// UserContainer.jsx
+import styles from '../stylesheets/modules/UserContainer.scss';
+```
+
+This gives you a `styles` object that contains the CSS rules defined in the imported file. You can assign these rules to your elements by assigning class names on the style object:
+
+```
+// UserContainer.jsx
+<button className={styles.button}>
+```
+
+And then unique class names are generated for that component, guaranteeing that the styles will be scoped locally.
+
+**Note:** CSS Modules are not a package to be imported - rather, they are a technique made possible by the Webpack build process. Again, since you'll have your build tools unit later on, I've already set up this project to enable CSS Modules.
+
+1. Create a new file named `Characters.scss` and place it in a new folder: `client/stylesheets/modules`.
+2. Import this file into `Characters.jsx`.
+3. Move any of the Characters component's styling rules (such as `.charContainer`) into the new `Characters.scss` module, and assign it a class name of your choosing.
+4. In `Characters.jsx`, update the `className` property of the corresponding elements.
+5. Inspect the page in the browser, and notice that the class is now showing a hashed value simliar to `Characters__container___2wXQr`.
 
 ### Styled Components
 There is a paradigm for styling known as "CSS-in-JS", where styling rules are defined with JavaScript instead of external stylesheets. One popular implemention of this for React is called [styled-components](https://www.styled-components.com/). This library uses ES6's template literals to allow the creation of custom React components that have styling rules embedded in them. For example, the following code creates a "Title" component which is just an h1 tag with the specified styling:
