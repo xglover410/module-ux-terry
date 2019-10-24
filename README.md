@@ -1,12 +1,12 @@
 # UX / UI Module
 
 ## Learning Goals
-This module is _designed_ (😉😉) to teach some basic design principles when styling a web application.  It includes a combination of general design principles, helpful tips and tricks for common css issues, and introduces SASS and some of it's most helpful starter features.
+This module is _designed_ (😉😉) to teach some basic design principles when styling a web application.  It includes a combination of general design principles, helpful tips and tricks for common CSS issues, and introduces Sass and some of its most helpful starter features.
 
 Goals for this module are:
 1. Get an understanding of basic design principles: how to layout an interface and think about mobile responsiveness, how to pick out a useful color palette
-2. Learn some tricky css moves: best ways to center a div, how to incorporate flexbox and grids
-3. An introduction to SASS: CSS preprocessor with some powerful features!
+2. Learn some tricky CSS moves: best ways to center a div, how to incorporate flexbox and grids
+3. An introduction to Sass: CSS preprocessor with some powerful features!
 
 ## Setup
 
@@ -28,43 +28,43 @@ The page looks a bit boring though. Let's see if we can make it look better.
 
 3. Going back to using the grid layout. Instead of 280px, we want the width of the card to be responsive instead. **Hint:** lookup what fractional units are and how to use them.
 
-4. Try changing the width of the browser; Notice how the width of the card expands and shrinks to fit 5 evenly sized columns , but the shrinking makes the cards pretty much unreadable. What if we want the card to be at least 280px wide; as we decrease the browser width, if the width of each card is about to be lower than 280px, we'd want to decrease the number of cards per row so that each card is at least 280px wide. How would you do that?
+4. Try changing the width of the browser; Notice how the width of the card expands and shrinks to fit 5 evenly sized columns, but the shrinking makes the cards pretty much unreadable. What if we want the card to be at least 280px wide; as we decrease the browser width, if the width of each card is about to be lower than 280px, we'd want to decrease the number of cards per row so that each card is at least 280px wide. How would you do that?
 
 ### Setup Individual Card Layout
 
 1. Now let's move on to the layout for an individual card. Notice that stats of the character are aligned to the left border of the card container. What if we want to center the stats? **Hint:** use flexbox
 
-    After you have set the display to flex for `.charDetailList`, do you notice the vertical spacing between the list items became wider? This might seem weird since we only added `display: flex` without changing margins. To figure out what is going on, we can use "Inspect Elements" from chrome dev tools to see how the margins of the list items change before and after setting display to flex. In both cases, are the margin overlapping or adjacent to each other?
+    After you have set the display to flex for `.charDetailList`, do you notice the vertical spacing between the list items became wider? This might seem weird since we only added `display: flex` without changing margins. To figure out what is going on, we can use "Inspect Elements" from Chrome dev tools to see how the margins of the list items change before and after setting display to flex. In both cases, are the margin overlapping or adjacent to each other?
 
     After setting display to flex you can see that the margins no longer overlap. This is a behavior called margin collapsing. Margin collapse is expected unless the display is set to `flex` or `grid`. There are more rules that govern when and how the margins collapse, which we won't have time to get into. Here's a link explaining this behavior:
 
-    [https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing](https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing&sa=D&ust=1563240325287000)
+    [https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 
 2. And now that we are working on the styling for the cards, let's change the font a bit as well. We will use Cabin for the stats and Oswald for the header. Google font is a popular site for importing font. Let's go ahead and import Cabin and Oswald into our stylesheet.
 
 3. The first thing that we are going to look at is the header of the cards. Notice that there's a horizontal white space between the character name and the star in the header. First, inspect the header using Chrome dev tool to see if you can figure out which part of the style.css specifies the white space.
 
-    You can see that the white space between the character name and the star is implemented by setting the width of div inside `.charHeaderContainer` class to 100%. If we remove that declaration, what would you have to add to the `.charHeaderContainer` in style.css so that the header and the star is apart from one other? **Hint:** you'd have to use flexbox here
+    You can see that the white space between the character name and the star is implemented by a rule targeting divs inside `.charHeaderContainer`. If we remove that declaration, what would you have to add to the `.charHeaderContainer` in style.css so that the header and the star is apart from one other?
 
-4. Let's explore css flexbox further by increasing the width of the header to 100px and inspect the header of the card again. You see that the star and the name of the character are not at the same level vertically. Why is that? Inspect the element again to see why that is the case. **Hint:** check margins
+4. Let's explore positioning further by increasing the width of the header to 100px and inspecting the header of the card again. You'll see that the star and the name of the character are not at the same level vertically. Why is that? Inspect the element again to see why that is the case. **Hint:** Check margins
 
-    Also, If you want to align the top of the star to the top of the header div, how would you do that? What if you want to align the bottom of the star to the bottom of the header div?
+    If you want to align the top of the star to the top of the header div, how would you do that? What if you want to align the bottom of the star to the bottom of the header div?
 
-5. Ane one final thing to want to go over is how to center a div. It's one of the most popular CSS questions that you'd encounter on the interview trail after codesmith. Currently there are two headers in our applications, One containing a h1 tag and another h2 tag. After setting the height of headers to 100px, How would you go about centering the h1 and h2 tags in their parent header div using flexbox?
+5. One final thing we'll go over is how to center a div. It's one of the most popular CSS questions that you'll encounter on the interview trail after Codesmith. Currently there are two headers in our applications: one containing a h1 tag and another a h2 tag. After setting the height of headers to 100px, how would you go about centering the h1 and h2 tags in their parent header div using flexbox?
 
-### Incorporate SASS
+### Incorporate Sass
 Now that we've learned how to do basic layout with grid and flexbox, I'll guide you through the process of adding Sass to your project. Since you'll have a dedicated unit on webpack later in the program, I have already installed node-sass and sass-loader and modified the webpack config for you. All you need to do is
 
 1. Change the style.css file to style.scss.         
 
 2. Do the same for the import statement in your App.jsx.
 
-3. Hit save and refresh the browser again, and if your app looks the same then boom you are now using sass. Is it really that simple? Yes it's that simple. 
+3. Hit save and refresh the browser again, and if your app looks the same then boom: you are now using Sass. Is it really that simple? Yes it's that simple. 
 
 ### Refactor with SASS Nesting
-Now let's move on to different sass feature that you can use with different web design principle + css declaration that will be useful for not only your projects here at Codesmith but also during your job search and career as well.
+Now let's move on to different Sass feature that you can use with different web design principle + css declaration that will be useful for not only your projects here at Codesmith but also during your job search and career as well.
 
-1. So one of the quick benefits of sass that we can go over now is nesting. Remember how we specify specific css style for an element that's inside a class:
+1. So one of the quick benefits of Sass that we can go over now is nesting. Remember how we specify specific CSS style for an element that's inside a class:
 
     ```scss
     .charHeadContainer{}
@@ -72,7 +72,7 @@ Now let's move on to different sass feature that you can use with different web 
     .charHeadContainer h2{}
     ```
 
-2. While this is fine, doing nesting with sass will be more readable. Look up how to do nesting with sass and refactor the style.scss for `.charHeadContainer` and `.charDetailsList`.
+2. While this is fine, doing nesting with Sass will be more readable. Look up how to do nesting with Sass and refactor the style.scss for `.charHeadContainer` and `.charDetailsList`.
 
 Nesting is not a must and it does not always improve readability. You can imagine if you have for example 10 level of nestedness, using this syntax might actually make it less readable. So use your judgement in this case.
 
@@ -142,7 +142,31 @@ Similar to different shades of "black" that we discussed earlier, you can have d
 
 ![button-border-mockup](./docs/images/button-border-mockup.png)
 
-### Implementing SASS Variables
+### Fluid Font Scaling
+Thanks to Flexbox, the size and number of the cards are nicely responsive, but the font size is static. Let's do something about that!
+
+Absolute units such as `px` set the font size to take up a fixed amount of space on a screen, but relative units can make our text more dynamic. One particularly useful set of units deals with the user's viewport (which refers to the visible area of a webpage). For example, to set the font size equal to 1% of the width of the user's current viewport, you would use the `vw` unit, as in `font-size: 1vw`.
+
+1. Write a CSS ruleset that selects the entire `html` tag, and sets the `font-size` equal to `1.5vw`. This will make the document's root font-size relative to the viewport. 
+
+2. Resize the window, and notice that the text size scales responsively.
+
+3. Notice, however, that the buttons' font size doesn't change. This is because buttons come with default styling, which includes absolute font-size units.
+
+4. Write a CSS rule targeting buttons that sets their `font-size` equal to 75% of the document's root font size. **Hint:** Look into what relative units CSS provides other than viewport-based units.
+
+### Media Queries
+Notice though, as the window shrinks further and further, the text starts to get uncomfortably small. This is where @media queries can come in handy. While media queries can be used in a variety of contexts, they are very often used to ensure that different CSS rulesets will apply depending on the current size of the client's screen. 
+
+1. Play around with resizing the screen in your browser's dev tools, and figure out what the breakpoint is where the font resizing makes it difficult to read. Chrome and other browsers have handy built-in developer tools to visualize and measure various screen sizes.
+
+2. Add a media query rule to your CSS so that when the client's screen falls below that breakpoint, the document's root `font-size` is set to absolute, rather than relative units. Play around with the breakpoint and font-size settings until you find the text scaling in a pleasant and readable way. For a deep dive into the subject of responsive typography and media queries, a great resource can be found [here](https://www.smashingmagazine.com/2016/05/fluid-typography/).
+
+3. Finally, add a media query targeting mobile devices (you may want to research common phone screen sizes). This rule should force the buttons to display vertically in a column instead of a row, and fill 100% of the width of their container. Also, it should center the rest of the character info so that everything is aligned. The final result should look something like this:
+
+![mobile-card-view](./docs/images/mobile-card-view.png)
+
+### Implementing Sass Variables
 As your application grows more complex, we would have different shades of primary color. What if the design team decided to change the primary color from blue to green instead? In the way our stylesheet is set up currently, changing different shades of blue to green while maintaining their hierarchy going to take a lot of time.
 
 To combat this, the first thing we can do is to use SCSS variables. Please take a few minutes to look up how to use variables in SCSS.
@@ -155,7 +179,64 @@ To combat this, the first thing we can do is to use SCSS variables. Please take 
 
 4. (optional) do the same but for different shade of black
 
+### The Sass @import Rule
+As projects grow, they quickly reach a point where it makes sense to modularize the styling rules into separate files, for improved readability and maintainability. Sass's `@import` rule allows for this importing of rulesets (as well as mixins, functions, and variables).
+
+Note: While plain CSS provides a similar feature with its `@import` rule, it causes the browser to make separate HTTP requests for each file, which isn't ideal. By comparison, Sass will compile all of the imports into a single file.
+
+First, create a new SCSS file in the `stylesheets` folder to contain your Sass variable declarations, so that they can be accesssed throughout the project. Sass files that are only meant to be imported are called ['partials'](https://sass-lang.com/documentation/at-rules/import#partials), and by convention their filenames start with an underscore. Therefore, call this file `_variables.scss` and move all of your color variables into this file.
+
+Then, in your `styles.scss` file, `@import` in the variables file. Note: when importing partials, you can leave off the underscore in the filename. Reload the page and verify all styling rules are still being applied.
+
+Finally, look through the `styles.scss` file and decide which rulesets would make sense to place in separate files. There's no one right answer - read [this guide](http://thesassway.com/beginner/how-to-structure-a-sass-project) for some general guidelines on how to structure Sass projects. For example, you might want to create a partial to contain all button-specific styling, and another to contain the header's styling. 
+
+After you've created your separate files and imported them accordingly, reload the page and verify all styling rules are still being applied. 
+
+
 ## Extensions
+
+### CSS Modules
+[CSS Modules](https://github.com/css-modules/css-modules) are another tool available to modularize our stylesheets - but beyond just modularization, they also help solve the problem of *scoping* in CSS. Even if you've used Sass imports to break up your stylesheets, they still ultimately get processed into the same global styling scope, so if you're not careful with your selector naming conventions you run the risk of conflicts.
+
+CSS Modules are just regular CSS (or Sass) files that get imported into individual front-end files - in our case, React components. The syntax looks like this:
+
+``` 
+// UserContainer.jsx
+import styles from '../stylesheets/modules/UserContainer.scss';
+```
+
+This gives you a `styles` object that contains the CSS rules defined in the imported file. You can assign these rules to your elements by assigning class names on the style object:
+
+```
+// UserContainer.jsx
+<button className={styles.button}>
+```
+
+And then unique class names are generated for that component, guaranteeing that the styles will be scoped locally.
+
+**Note:** CSS Modules are not a package to be imported - rather, they are a technique made possible by the Webpack build process. Again, since you'll have your build tools unit later on, I've already set up this project to enable CSS Modules.
+
+1. Create a new file named `Characters.scss` and place it in a new folder: `client/stylesheets/modules`.
+2. Import this file into `Characters.jsx`.
+3. Move any of the Characters component's styling rules (such as `.charContainer`) into the new `Characters.scss` module, and assign it a class name of your choosing.
+4. In `Characters.jsx`, update the `className` property of the corresponding elements.
+5. Inspect the page in the browser, and notice that the class is now showing a hashed value simliar to `Characters__container___2wXQr`.
+
+### Styled Components
+There is a paradigm for styling known as "CSS-in-JS", where styling rules are defined with JavaScript instead of external stylesheets. One popular implemention of this for React is called [styled-components](https://www.styled-components.com/). This library uses ES6's template literals to allow the creation of custom React components that have styling rules embedded in them. For example, the following code creates a "Title" component which is just an h1 tag with the specified styling:
+
+
+```
+const Title = styled.h1` 
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+```
+
+Which would then be able to be rendered using the JSX syntax `<Title>`.
+
+For this extension, refactor your code so that the character card container (`.charCard`) and its styling are implemented using styled-components. You will need to install the package - see instructions [here](https://www.styled-components.com/docs/basics#installation) on installing and getting started.
 
 ### Form Styling
 Since we did not explicitly cover styling this page, use what you have learned so far and apply some of your new design skills to this page!  How would you style the buttons? The input field?
