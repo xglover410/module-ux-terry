@@ -166,7 +166,7 @@ Notice though, as the window shrinks further and further, the text starts to get
 
 ![mobile-card-view](./docs/images/mobile-card-view.png)
 
-### Implementing SASS Variables
+### Implementing Sass Variables
 As your application grows more complex, we would have different shades of primary color. What if the design team decided to change the primary color from blue to green instead? In the way our stylesheet is set up currently, changing different shades of blue to green while maintaining their hierarchy going to take a lot of time.
 
 To combat this, the first thing we can do is to use SCSS variables. Please take a few minutes to look up how to use variables in SCSS.
@@ -179,8 +179,8 @@ To combat this, the first thing we can do is to use SCSS variables. Please take 
 
 4. (optional) do the same but for different shade of black
 
-### The SASS @import Rule
-As projects grow, they quickly reach a point where it makes sense to modularize the styling rules into separate files, for improved readability and maintainability. SASS's `@import` rule allows for this importing of rulesets (as well as mixins, functions, and variables).
+### The Sass @import Rule
+As projects grow, they quickly reach a point where it makes sense to modularize the styling rules into separate files, for improved readability and maintainability. Sass's `@import` rule allows for this importing of rulesets (as well as mixins, functions, and variables).
 
 Note: While plain CSS provides a similar feature with its `@import` rule, it causes the browser to make separate HTTP requests for each file, which isn't ideal. By comparison, Sass will compile all of the imports into a single file.
 
@@ -196,7 +196,7 @@ After you've created your separate files and imported them accordingly, reload t
 ## Extensions
 
 ### CSS Modules
-(CSS Modules)[https://github.com/css-modules/css-modules] are another tool available to modularize our stylesheets - but beyond just modularization, they also help solve the problem of *scoping* in CSS. Even if you've used Sass imports to break up your stylesheets, they still ultimately get processed into the same global styling scope, so if you're not careful with your selector naming conventions you run the risk of conflicts.
+[CSS Modules](https://github.com/css-modules/css-modules) are another tool available to modularize our stylesheets - but beyond just modularization, they also help solve the problem of *scoping* in CSS. Even if you've used Sass imports to break up your stylesheets, they still ultimately get processed into the same global styling scope, so if you're not careful with your selector naming conventions you run the risk of conflicts.
 
 CSS Modules are just regular CSS (or Sass) files that get imported into individual front-end files - in our case, React components. The syntax looks like this:
 
