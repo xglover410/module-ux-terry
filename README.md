@@ -79,7 +79,7 @@ Nesting is not a must and it does not always improve readability. You can imagin
 ### Font Colors
 Another thing that we are going to do is pick colors. When you think about sites like Google. Youtube, or Google Doc, you might think it's mostly white background and black font, and there's only one black and one white. But if you look closely, you'd see that they are different shades of black for different texts. For example, take a look at the post on Codesmith Facebook page:
 
-![cs-fb-post](./docs/images/codesmith-facebook.png)
+![cs-fb-post](./docs/assets/images/codesmith-facebook.png)
 
 The body of texts, the timestamp, like and share buttons, they all have different colors. 
 
@@ -91,13 +91,13 @@ How does it look now compared to before? By removing the hierarchy of color, whi
 
 In general, you can pick three black; a primary, a secondary, and a tertiary black as shown in the picture on the lower left. The resulting visual hierarchy can be seen in the picture on the right hand side.
 
-![black-color-picker](./docs/images/black-color-picker.png)
+![black-color-picker](./docs/assets/images/black-color-picker.png)
 
 If you understand this idea, why don't we go ahead and try this out for our project?
 
 Here's what the final result should look.
 
-![card-font-color-mockup](./docs/images/card-font-color-mockup.png)
+![card-font-color-mockup](./docs/assets/images/card-font-color-mockup.png)
 
 To get this color scheme, you'll need four colors.
 
@@ -130,17 +130,17 @@ Similar to different shades of "black" that we discussed earlier, you can have d
 
 1. Now that you are familiar with primary colors, let's pick the blue that [Google Doc](https://www.google.com/docs/about/) uses and use that for the card's buttons. Try to match the style to the picture below **Hint:** the width and height of the buttons are not specified, but the padding of the buttons is.
 
-![button-color-mockup](./docs/images/button-color-mockup.png)
+![button-color-mockup](./docs/assets/images/button-color-mockup.png)
 
 2. As your are adding border-radius for the button (Hint Hint), you would also want to change the border radius of your card too. Having different border radius signals different style within your application to your user and can be visually disorienting. This is true for border thickness as well.
 
 3. In our example above, for the "Customize Character" button, we decided to make it a secondary button, so that the user's more likely to click on "Get More Info" instead. To make the secondary button, we turn the font blue against a white background while using a lighter primary blue for the border. When juxtaposed with the button with the blue background, the "Customize Character" button is less conspicuous. Below are more examples of creating visual hierarchy for buttons:
 
-![visual-hierarchy-examples](./docs/images/visual-hierarchy-examples.png)
+![visual-hierarchy-examples](./docs/assets/images/visual-hierarchy-examples.png)
 
 4. We can make the blue even more cohesive by adding a much lighter blue from primary blue to the card's border.
 
-![button-border-mockup](./docs/images/button-border-mockup.png)
+![button-border-mockup](./docs/assets/images/button-border-mockup.png)
 
 ### Fluid Font Scaling
 Thanks to Flexbox, the size and number of the cards are nicely responsive, but the font size is static. Let's do something about that!
@@ -164,7 +164,7 @@ Notice though, as the window shrinks further and further, the text starts to get
 
 3. Finally, add a media query targeting mobile devices (you may want to research common phone screen sizes). This rule should force the buttons to display vertically in a column instead of a row, and fill 100% of the width of their container. Also, it should center the rest of the character info so that everything is aligned. The final result should look something like this:
 
-![mobile-card-view](./docs/images/mobile-card-view.png)
+![mobile-card-view](./docs/assets/images/mobile-card-view.png)
 
 ### Implementing Sass Variables
 As your application grows more complex, we would have different shades of primary color. What if the design team decided to change the primary color from blue to green instead? In the way our stylesheet is set up currently, changing different shades of blue to green while maintaining their hierarchy going to take a lot of time.
