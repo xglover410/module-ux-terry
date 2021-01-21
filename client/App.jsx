@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-first-prop-new-line */
-/* eslint-disable react/jsx-max-props-per-line */
-/* eslint-disable react/no-access-state-in-setstate */
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
