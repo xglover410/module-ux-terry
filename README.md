@@ -46,7 +46,7 @@ The page looks a bit boring though. Let's see if we can make it look better.
 
     You can see that the white space between the character name and the star is implemented by a rule targeting divs inside `.charHeaderContainer`. If we remove that declaration, what would you have to add to the `.charHeaderContainer` in style.css so that the header and the star is apart from one other?
 
-4. Let's explore positioning further by increasing the width of the header to 100px and inspecting the header of the card again. You'll see that the star and the name of the character are not at the same level vertically. Why is that? Inspect the element again to see why that is the case. **Hint:** Check margins
+4. Let's explore positioning further by increasing the height of the header to 100px and inspecting the header of the card again. You'll see that the star and the name of the character are not at the same level vertically. Why is that? Inspect the element again to see why that is the case. **Hint:** Check margins
 
     If you want to align the top of the star to the top of the header div, how would you do that? What if you want to align the bottom of the star to the bottom of the header div?
 
