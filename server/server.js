@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -11,8 +10,8 @@ const PORT = 3000;
 /**
  * handle parsing request body
  */
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 /**
  * handle requests for static files
