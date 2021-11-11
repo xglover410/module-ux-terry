@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -18,15 +17,13 @@ module.exports = {
     host: 'localhost',
     port: 8080,
     // match the output path
-    contentBase: path.resolve(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, './dist'),
+    },
     // enable HMR on the devServer
     hot: true,
-    // match the output 'publicPath'
-    publicPath: '/',
     // fallback to root for other urls
     historyApiFallback: true,
-
-    inline: true,
 
     headers: { 'Access-Control-Allow-Origin': '*' },
     /**
