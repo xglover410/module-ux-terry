@@ -1,33 +1,56 @@
 {
   "root": true,
-  "ignorePatterns": ["**/test", "**/__tests__"],
+  "ignorePatterns": [
+    "**/test",
+    "**/__tests__"
+  ],
   "env": {
     "node": true,
     "browser": true,
-    "es2021": true
+    "es2022": true
   },
-  "plugins": ["css-modules", "react"],
+  "plugins": [
+    "css-modules",
+    "react"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:css-modules/recommended",
     "plugin:react/recommended"
   ],
   "parserOptions": {
+    "ecmaVersion": 2022,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     }
   },
   "rules": {
-    "indent": ["warn", 2],
-    "no-unused-vars": ["off", { "vars": "local" }],
+    "indent": [
+      "warn",
+      2
+    ],
+    "no-unused-vars": [
+      "off",
+      {
+        "vars": "local"
+      }
+    ],
     "prefer-const": "warn",
-    "quotes": ["warn", "single"],
+    "quotes": [
+      "warn",
+      "single"
+    ],
     "react/prop-types": "off",
-    "semi": ["warn", "always"],
+    "semi": [
+      "warn",
+      "always"
+    ],
     "space-infix-ops": "warn"
   },
   "settings": {
-    "react": { "version": "detect"}
+    "react": {
+      "version": "16.5"
+    }
   }
 }
