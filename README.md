@@ -44,7 +44,7 @@ The page looks a bit boring though. Let's see if we can make it look better.
 
 3. The first thing that we are going to look at is the header of the cards. Notice that there's a horizontal white space between the character name and the star in the header. First, inspect the header using Chrome dev tool to see if you can figure out which part of the style.css specifies the white space.
 
-    You can see that the white space between the character name and the star is implemented by a rule targeting divs inside `.charHeaderContainer`. If we remove that declaration, what would you have to add to the `.charHeaderContainer` in style.css so that the header and the star is apart from one other?
+    You can see that the white space between the character name and the star is implemented by a rule targeting divs inside `.charHeadContainer`. If we remove that declaration, what would you have to add to the `.charHeadContainer` in style.css so that the header and the star is apart from one other?
 
 4. Let's explore positioning further by increasing the height of the header to 100px and inspecting the header of the card again. You'll see that the star and the name of the character are not at the same level vertically. Why is that? Inspect the element again to see why that is the case. **Hint:** Check margins
 
