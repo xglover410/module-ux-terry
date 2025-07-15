@@ -34,7 +34,7 @@ The page looks a bit boring though. Let's see if we can make it look better.
 
 1. Now let's move on to the layout for an individual card. Notice that stats of the character are aligned to the left border of the card container. What if we want to center the stats? **Hint:** use flexbox
 
-    After you have set the display to flex for `.charDetailList`, do you notice the vertical spacing between the list items became wider? This might seem weird since we only added `display: flex` without changing margins. To figure out what is going on, we can use "Inspect Elements" from Chrome dev tools to see how the margins of the list items change before and after setting display to flex. In both cases, are the margin overlapping or adjacent to each other?
+    After you have set the display to flex for `.charDetailList`, do you notice the vertical spacing between the list items became wider? This might seem weird since we only added `display: flex` without changing margins. To figure out what is going on, we can use "Inspect Elements" from Chrome dev tools to see how the margins of the list items change before and after setting display to flex. In both cases, are the margins overlapping or adjacent to each other?
 
     After setting display to flex you can see that the margins no longer overlap. This is a behavior called margin collapsing. Margin collapse is expected unless the display is set to `flex` or `grid`. There are more rules that govern when and how the margins collapse, which we won't have time to get into. Here's a link explaining this behavior:
 
@@ -74,7 +74,7 @@ Now let's move on to different Sass features that you can use with different web
 
 2. While this is fine, doing nesting with Sass will be more readable. Look up how to do nesting with Sass and refactor the style.scss for `.charHeadContainer` and `.charDetailsList`.
 
-Nesting is not a must and it does not always improve readability. You can imagine if you have for example 10 level of nestedness, using this syntax might actually make it less readable. So use your judgement in this case.
+Nesting is not a must and it does not always improve readability. You can imagine if you have for example 10 level of nestedness, using this syntax might actually make it less readable. So use your judgment in this case.
 
 ### Font Colors
 Another thing that we are going to do is pick colors. When you think about sites like Google. Youtube, or Google Doc, you might think it's mostly white background and black font, and there's only one black and one white. But if you look closely, you'd see that they are different shades of black for different texts. For example, take a look at the post on Codesmith Facebook page:
@@ -107,7 +107,7 @@ To get this color scheme, you'll need four colors.
 4. **And super light grey:** this super light grey will be much lighter than the light grey above. We are using a super light grey as the background color to demarcate the cards. The user will be subconsciously drawn to the white card itself without being distracted by the contrast, therefore focusing on the primary and secondary black front that you carefully laid out before.
 
 ### Shadows
-Now we've added the colors but there's still something missing to make the cards more prominent: shadows. For adding shadow, you'd use the CSS declaration box-shadow. Here's the link to the syntax :[https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow](https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow&sa=D&ust=1563240325308000). Let's go ahead and add some shadow for the box.
+Now we've added the colors but there's still something missing to make the cards more prominent: shadows. For adding shadow, you'd use the CSS declaration box-shadow. Here's the link to the syntax: [https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow). Let's go ahead and add some shadow for the box.
 
 When adding box shadow, there are several things to consider:
 
@@ -121,7 +121,8 @@ When adding box shadow, there are several things to consider:
 
 The trick here is that the shadow should be subtle, meaning the edge should be soft and the color of the shadow should just be a little bit darker than the background color to avoid stark contrast.
 
-To read more on why lighting and shadow are important and how to do them properly, here's the material design doc link on lights and shadow from the material design doc [https://material.io/design/environment/light-shadows.html](https://www.google.com/url?q=https://material.io/design/environment/light-shadows.html&sa=D&ust=1563240325312000):)
+To read more on why lighting and shadow are important and how to do them properly, here's the material design doc link on lights and shadow from the material design doc: [https://material.io/design/environment/light-shadows.html](https://material.io/design/environment/light-shadows.html).
+
 
 ### More Color!
 Besides picking different shades of black, you can also pick a primary _color_ to not only provide a theme and identity of your application, but also to guide your user's visual attention (e.g. blue is the primary color for Facebook). This primary color can be used to highlight additional titles, navbar items and buttons.
@@ -190,7 +191,7 @@ First, create a new SCSS file in the `stylesheets` folder to contain your Sass v
 
 Then, in your `styles.scss` file, `@import` in the variables file. Note: when importing partials, you can leave off the underscore in the filename. Reload the page and verify all styling rules are still being applied.
 
-Finally, look through the `styles.scss` file and decide which rulesets would make sense to place in separate files. There's no one right answer - read [this guide](http://thesassway.com/beginner/how-to-structure-a-sass-project) for some general guidelines on how to structure Sass projects. For example, you might want to create a partial to contain all button-specific styling, and another to contain the header's styling. 
+Finally, look through the `styles.scss` file and decide which rulesets would make sense to place in separate files. There's no one right answer - read [this guide](https://sass-lang.com/guide) for some general guidelines on how to structure Sass projects. For example, you might want to create a partial to contain all button-specific styling, and another to contain the header's styling. 
 
 After you've created your separate files and imported them accordingly, reload the page and verify all styling rules are still being applied. 
 
@@ -252,8 +253,8 @@ Animations are an important part of flat design 2.0 and material design. For exa
 
 We will be focusing on hover animation here.
 
-1. Animation on hover can be implemented using :hover pseudo-class ([https://developer.mozilla.org/en-US/docs/Web/CSS/:hover](https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/:hover&sa=D&ust=1563240325324000)) Let's implement a hover animation so that when the user hovers over the buttons, the opacity changes. Make sure there's a smooth transition as well. We can use ease-in for the transition for now. For optimal animation timing, you can refer to the material design doc: [https://material.io/design/motion/](https://www.google.com/url?q=https://material.io/design/motion/&sa=D&ust=1563240325324000). CSS transition is also an area worth exploring ([https://developer.mozilla.org/en-US/docs/Web/CSS/transition](https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/CSS/transition&sa=D&ust=1563240325325000)); ease-in is just one of the many timing functions that you can use for your transition. Feel free to play around with different timing function, or even customize your own with "cubic-bezier" and see what kind of interesting transition that you can come up with.
+1. Animation on hover can be implemented using :hover pseudo-class ([https://developer.mozilla.org/en-US/docs/Web/CSS/:hover](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover)) Let's implement a hover animation so that when the user hovers over the buttons, the opacity changes. Make sure there's a smooth transition as well. We can use ease-in for the transition for now. For optimal animation timing, you can refer to the material design doc: [https://m2.material.io/design/motion/understanding-motion.html#principles](https://m2.material.io/design/motion/understanding-motion.html#principles). CSS transition is also an area worth exploring ([https://developer.mozilla.org/en-US/docs/Web/CSS/transition](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)); ease-in is just one of the many timing functions that you can use for your transition. Feel free to play around with different timing function, or even customize your own with "cubic-bezier" and see what kind of interesting transition that you can come up with.
 
 ### before + after pseudo-elements
 
-Pseudo-elements is a keyword added to a selector that lets you style a specific part of the selected element(s). Take a look at the documentation for ::before and ::after pseudo-elements on MDN. Let's say we want to add the text "CSS is awesome" to the right the only h1 tag with the text "characters", how would you do it? What if we only want to add the text on hover?  Let's make sure we use the primary-color that we have picked for the content of the pseudo-element as well.
+Pseudo-elements is a keyword added to a selector that lets you style a specific part of the selected element(s). Take a look at the documentation for [::before and ::after pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements) on MDN. Let's say we want to add the text "CSS is awesome" to the right the only h1 tag with the text "characters", how would you do it? What if we only want to add the text on hover?  Let's make sure we use the primary-color that we have picked for the content of the pseudo-element as well.
