@@ -107,7 +107,7 @@ To get this color scheme, you'll need four colors.
 4. **And super light grey:** this super light grey will be much lighter than the light grey above. We are using a super light grey as the background color to demarcate the cards. The user will be subconsciously drawn to the white card itself without being distracted by the contrast, therefore focusing on the primary and secondary black front that you carefully laid out before.
 
 ### Shadows
-Now we've added the colors but there's still something missing to make the cards more prominent: shadows. For adding shadow, you'd use the CSS declaration box-shadow. Here's the link to the syntax: [https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow). Let's go ahead and add some shadow for the box.
+Now we've added the colors but there's still something missing to make the cards more prominent: shadows. For adding shadow, you'd use the CSS declaration box-shadow. You can find the syntax [here](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow). Let's go ahead and add some shadow for the box.
 
 When adding box shadow, there are several things to consider:
 
