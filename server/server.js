@@ -1,9 +1,10 @@
-const path = require('path');
-const express = require('express');
+import path from 'path';
+import express from 'express';
+
+import fileController from './controllers/fileController.js';
 
 const app = express();
 
-const fileController = require('./controllers/fileController');
 
 const PORT = 3000;
 
@@ -16,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 /**
  * handle requests for static files
  */
-app.use(express.static(path.resolve(__dirname, 'client')));
+app.use(express.static(path.resolve(import.meta.dirname, 'client')));
 
 /**
  * define route handlers
@@ -35,7 +36,7 @@ app.post('/api/info',
 
 // respond with main app
 app.get('/', (req, res) => (
-  res.status(200).sendFile(path.resolve(__dirname, '../client/index.html'))
+  res.status(200).sendFile(path.resolve(import.meta.dirname, '../client/index.html'))
 ));
 
 /**
@@ -45,4 +46,4 @@ app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });
 
-module.exports = app;
+export default app;
