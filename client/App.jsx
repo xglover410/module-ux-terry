@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Characters from './components/Characters';
-import CustomCharacter from './components/CustomCharacter';
+import Characters from './components/Characters.jsx';
+import CustomCharacter from './components/CustomCharacter.jsx';
 import './stylesheets/styles.css';
 
 class App extends Component {

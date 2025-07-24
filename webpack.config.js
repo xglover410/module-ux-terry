@@ -1,13 +1,13 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
+export default {
   entry: [
     // entry point of our app
     './client/index.js',
   ],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(import.meta.dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js',
   },
@@ -18,7 +18,7 @@ module.exports = {
     port: 8080,
     // match the output path
     static: {
-      directory: path.join(__dirname, './dist'),
+      directory: path.join(import.meta.dirname, './dist'),
     },
     // enable HMR on the devServer
     hot: true,
