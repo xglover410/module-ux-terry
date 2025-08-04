@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import CharacterCard from './CharacterCard.jsx';
+import CharacterCard from './CharacterCard.js';
 
-class Characters extends Component {
+class Characters extends  Component {
   constructor(props) {
     super(props);
 

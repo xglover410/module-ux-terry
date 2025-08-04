@@ -14,7 +14,7 @@ Run `npm install` to install dependencies
 
 Run `npm start` to start your server
 
-This should open a new tab in your browser, displaying cards with Star Wars characters on them. If not, you can go to `localhost:8080` to see the app.
+You can go to `http://localhost:5173` to see the app.
 
 The page looks a bit boring though. Let's see if we can make it look better.
 
@@ -53,7 +53,7 @@ The page looks a bit boring though. Let's see if we can make it look better.
 5. One final thing we'll go over is how to center a div. It's one of the most popular CSS questions that you'll encounter on the interview trail after Codesmith. Currently there are two headers in our applications: one containing a h1 tag and another a h2 tag. After setting the height of headers to 100px, how would you go about centering the h1 and h2 tags in their parent header div using flexbox?
 
 ### Incorporate Sass
-Now that we've learned how to do basic layout with grid and flexbox, I'll guide you through the process of adding Sass to your project. I have already installed the modern Sass compiler and sass-loader and modified the webpack config for you. All you need to do is
+Now that we've learned how to do basic layout with grid and flexbox, I'll guide you through the process of adding Sass to your project. The Sass compiler is already installed, so all you need to do is
 
 1. Change the style.css file to style.scss.         
 

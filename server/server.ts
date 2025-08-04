@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'express';
 
-import fileController from './controllers/fileController.js';
+import fileController from './controllers/fileController.ts';
 
 const app = express();
 
