@@ -57,7 +57,7 @@ Now that we've learned how to do basic layout with grid and flexbox, I'll guide 
 
 1. Change the style.css file to style.scss.         
 
-2. Do the same for the import statement in your App.jsx.
+2. Do the same for the import statement in your App.tsx.
 
 3. Hit save and refresh the browser again, and if your app looks the same then boom: you are now using Sass. Is it really that simple? Yes it's that simple. 
 
@@ -204,14 +204,14 @@ After you've created your separate files and imported them accordingly, reload t
 CSS Modules are just regular CSS (or Sass) files that get imported into individual front-end files - in our case, React components. The syntax looks like this:
 
 ``` 
-// UserContainer.jsx
+// UserContainer.tsx
 import styles from '../stylesheets/modules/UserContainer.scss';
 ```
 
 This gives you a `styles` object that contains the CSS rules defined in the imported file. You can assign these rules to your elements by assigning class names on the style object:
 
 ```
-// UserContainer.jsx
+// UserContainer.tsx
 <button className={styles.button}>
 ```
 
@@ -220,9 +220,9 @@ And then unique class names are generated for that component, guaranteeing that 
 **Note:** CSS Modules are not a package to be imported - rather, they are a technique made possible by the build process. I've already set up this project to enable CSS Modules.
 
 1. Create a new file named `Characters.scss` and place it in a new folder: `client/stylesheets/modules`.
-2. Import this file into `Characters.jsx`.
+2. Import this file into `Characters.tsx`.
 3. Move any of the Characters component's styling rules (such as `.charContainer`) into the new `Characters.scss` module, and assign it a class name of your choosing.
-4. In `Characters.jsx`, update the `className` property of the corresponding elements.
+4. In `Characters.tsx`, update the `className` property of the corresponding elements.
 5. Inspect the page in the browser, and notice that the class is now showing a hashed value similar to `Characters__container___2wXQr`.
 
 ### Styled Components

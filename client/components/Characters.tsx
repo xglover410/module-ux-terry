@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CharacterCard from './CharacterCard.js';
+import CharacterCard from './CharacterCard.tsx';
 
 class Characters extends  Component {
   constructor(props) {
