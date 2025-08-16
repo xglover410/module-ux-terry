@@ -14,7 +14,7 @@ Run `npm install` to install dependencies
 
 Run `npm start` to start your server
 
-This should open a new tab in your browser, displaying cards with Star Wars characters on them. If not, you can go to `localhost:8080` to see the app.
+You can go to `http://localhost:5173` to see the app.
 
 The page looks a bit boring though. Let's see if we can make it look better.
 
@@ -53,11 +53,11 @@ The page looks a bit boring though. Let's see if we can make it look better.
 5. One final thing we'll go over is how to center a div. It's one of the most popular CSS questions that you'll encounter on the interview trail after Codesmith. Currently there are two headers in our applications: one containing a h1 tag and another a h2 tag. After setting the height of headers to 100px, how would you go about centering the h1 and h2 tags in their parent header div using flexbox?
 
 ### Incorporate Sass
-Now that we've learned how to do basic layout with grid and flexbox, I'll guide you through the process of adding Sass to your project. I have already installed the modern Sass compiler and sass-loader and modified the webpack config for you. All you need to do is
+Now that we've learned how to do basic layout with grid and flexbox, I'll guide you through the process of adding Sass to your project. The Sass compiler is already installed, so all you need to do is
 
 1. Change the style.css file to style.scss.         
 
-2. Do the same for the import statement in your App.jsx.
+2. Do the same for the import statement in your App.tsx.
 
 3. Hit save and refresh the browser again, and if your app looks the same then boom: you are now using Sass. Is it really that simple? Yes it's that simple. 
 
@@ -204,14 +204,14 @@ After you've created your separate files and imported them accordingly, reload t
 CSS Modules are just regular CSS (or Sass) files that get imported into individual front-end files - in our case, React components. The syntax looks like this:
 
 ``` 
-// UserContainer.jsx
+// UserContainer.tsx
 import styles from '../stylesheets/modules/UserContainer.scss';
 ```
 
 This gives you a `styles` object that contains the CSS rules defined in the imported file. You can assign these rules to your elements by assigning class names on the style object:
 
 ```
-// UserContainer.jsx
+// UserContainer.tsx
 <button className={styles.button}>
 ```
 
@@ -220,9 +220,9 @@ And then unique class names are generated for that component, guaranteeing that 
 **Note:** CSS Modules are not a package to be imported - rather, they are a technique made possible by the build process. I've already set up this project to enable CSS Modules.
 
 1. Create a new file named `Characters.scss` and place it in a new folder: `client/stylesheets/modules`.
-2. Import this file into `Characters.jsx`.
+2. Import this file into `Characters.tsx`.
 3. Move any of the Characters component's styling rules (such as `.charContainer`) into the new `Characters.scss` module, and assign it a class name of your choosing.
-4. In `Characters.jsx`, update the `className` property of the corresponding elements.
+4. In `Characters.tsx`, update the `className` property of the corresponding elements.
 5. Inspect the page in the browser, and notice that the class is now showing a hashed value similar to `Characters__container___2wXQr`.
 
 ### Styled Components
