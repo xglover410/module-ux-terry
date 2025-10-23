@@ -16,35 +16,58 @@ ul {
 
 /* cards container */
 .charContainer {
-  
+  display: grid;
+  /* grid-template-columns: 280px 1fr 1fr 1fr 1fr; */
+  /* repeat() will make so that cards will wrap as the broswer width shrinks */
+  grid-template-columns: repeat(auto-fill, 280px)
+  /* Another way to do it... grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  --> Laynie says this worked, Lawrenzo said theirs didn't. Might be an extra line in Lawrenzo/Karina's team that is breaking their code?
+*/
+  /* min-width: 280px; */
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
 }
 
 /* character card container */
+/* @import url() */
+
 .charCard {
   background-color:white;
   border: 1px solid rgb(0, 0, 0);
   margin: 5px;
+  font-family: Cabin;
 }
 
 /* character card header */
 .charHeadContainer {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  font-family: Oswald;
 }
 
-.charHeadContainer div {
+/* Rule targeting divs inside .charHeadContainer */
+/* .charHeadContainer div {
   width: 100%;
-}
-
+} */
 
 .charHeadContainer h2 {
   margin-bottom: 0;
 }
 
+/* For pointing to specific class within a class */
 .charHeadContainer .favIcon {
-
+  /* padding-left: 75px; */
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
+.charHeadContainer .charName {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 
 /* character additional details - films */
 .charAddlDetail {
@@ -60,12 +83,15 @@ ul {
   margin-left: 0.5rem;
 }
 
-.charDetailsList{
-
-}
+/* Why two of these? */
+/* .charDetailsList{
+ 
+} */
 
 .charDetailsList li{ 
   margin:5px;
+  display: flex;
+  justify-content: center;
 }
 
 .primaryButton{
